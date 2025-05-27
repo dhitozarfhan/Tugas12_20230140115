@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pendaftaran Peminatan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <form id="formPeminatan" class="card">
+      <h2 class="card-title">📘 Pendaftaran Peminatan</h2>
+
+      <!-- Input Nama -->
+      <div class="form-group">
+        <label for="nama">👤 Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+      </div>
+
+      <!-- Input NIM -->
+      <div class="form-group">
+        <label for="nim">🎓 NIM</label>
+        <input type="text" id="nim" name="nim" placeholder="Nomor Induk Mahasiswa" required>
+      </div>
+
+      <!-- Radio Peminatan -->
+      <div class="form-group">
+        <label>📌 Peminatan</label>
+        <div class="radio-group">
+          <label><input type="radio" name="peminatan" value="Programming"> Programming</label>
+          <label><input type="radio" name="peminatan" value="Desain"> Desain</label>
+          <label><input type="radio" name="peminatan" value="Jaringan"> Jaringan</label>
+          <label><input type="radio" name="peminatan" value="Data"> Data</label>
+        </div>
+      </div>
+
+      <!-- Alamat -->
+      <div class="form-group">
+        <label for="alamat">📍 Alamat</label>
+        <textarea id="alamat" name="alamat" placeholder="Tulis alamat lengkap..." rows="4" required></textarea>
+      </div>
+
+      <!-- Dropdown Angkatan -->
+      <div class="form-group">
+        <label for="angkatan">🎓 Pilih Angkatan</label>
+        <select id="angkatan" required>
+          <option value="">-- Pilih Tahun --</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+      </div>
+
+      <!-- Input Tanggal -->
+      <div class="form-group">
+        <label for="tanggal">📅 Tanggal</label>
+        <input type="date" id="tanggal" required>
+      </div>
+
+      <!-- Tombol Kirim -->
+      <button type="button" onclick="kirimData()">🚀 Kirim</button>
+    </form>
+  </div>
+</body>
+</html>
